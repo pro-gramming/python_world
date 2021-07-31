@@ -1,0 +1,59 @@
+#name of module 
+import datetime
+
+►two key terms :- naive and aware date or time
+►naive date or time - don't have enough info that can identify the different timezone or etc.(easier
+ to work with.)
+
+d = datetime.date(year, month, date)
+tday = datetime.date.today()  #returns the current local date
+
+#getting the current year or day only 
+print(tday.day)
+print(tday.year)
+
+print(tday.weekday())	#here:  monday 0 and sunday 6
+print(tday.isoweekday())	#here:  moday 1 and sunday 7
+
+♦Timedeltas - these are the differnece between time or date's.
+#creating a timedelta
+tdelta = datetime.timedelta(days=7)
+
+NOTE: #date2 = date1 + timedelta      => adding or substracting timedelta to time or date gives date.
+             #timedelta = date1 + date2      => adding a date to a date gives the timedelta
+
+Ex- bday = datetime.date(2016, 9, 24)
+
+till_bday = bday - tday
+print(till_bday.days)
+print(till_bday.total_seconds())
+
+► creating a time: 
+t = datetime.time(hours , min, sec , microsec)
+#this also a naive method as this gives the h,m,s,micrsc without the date,month,year
+
+♦Getting the whole info 
+dt = datetime.datetime(year, month , date, hour , min, sec, microsec)
+print(dt.date())
+print(dt.time())
+print(dt.year)
+
+
+♦Alternative constructors but the useful one:-
+
+dt_today = datetime.datetime.today()  #returns date with timezone set to 9
+dt_now = datetime.datetime.now() no set timezone but can be set explicitly
+dt_utcnow = datetime.datetime.utcnow()
+
+► when dealing with timezones it is recommended to work with utc
+♦UTC :- Universal coordinated time
+
+♦To work with UTC timezones it's better to install and import pytz library.
+►pip install pytz
+
+►printing the timezones in pytz
+
+#for tz in pytz.all_timezones:
+	print(tz)
+
+

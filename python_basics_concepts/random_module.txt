@@ -1,0 +1,56 @@
+#we can use this to create the dummy data that we can later use for input methods for our func.
+#hence we can create that from this.
+
+NOTE: should not be used for security purposes or cryptography.
+
+♦secrets module - for security purposes.
+
+♦how to include random module
+►import random
+
+►using the random method in random module:
+value = random.random()
+print(value)
+
+#it prints the values between 0 and 1 where 0 is inclusive but 1 is not.
+
+►getting the floating point values in certain range:
+#value = random.uniform(1, 10)
+print(value)
+
+►getting the random integers under certain range:
+value = random.randint(1, 6)	#here both 1 and 6 are inclusive
+print(value)
+
+►taking the random values from the list :
+lst = ['a','b','c','d','s','e']
+value = random.choice(lst)
+print(lst)
+
+►printig multiple values from the list:
+colors = ['Red' , 'Black', 'Green']
+results = random.choices(colors, weights=[18, 18, 2], k=10)
+print(results)
+
+#here k is used to show how many times random value should be produced. 
+#the choices function returns the list of these values.
+#weights option represents the likability of the element to be present in the list.
+
+►how to randomly shuffle the list around:
+deck = list(range(1, 53)
+random.shuffle(deck)
+print(deck)
+
+NOTE: Now suppose you want to select 5 random cards from this deck.
+	we won't use the choices method as it can select the single card multiple times.
+	Hence we'll be using the sample method.
+
+deck = list(range(1, 53)
+hand = random.sample(deck, k=5)
+print(hand)
+
+
+
+
+
+

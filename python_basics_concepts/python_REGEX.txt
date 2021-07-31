@@ -1,0 +1,30 @@
+# for using the regular expression in python : we use "re" module
+► import re
+
+#raw string : don't interpret anything  , takes everything as literal.
+► print(r'/tTab')
+
+#compile method let us to get the info after applying regex and use it in variables like:
+► patter = re.compile()
+
+matches = pattern.finditer(text_to_search)
+
+for match in matches: 
+     print(match)
+
+# finditer() - returns matches with extra bit of info 
+# findall() - will return the list of strings.
+    ► if there are groups in the re.compile() method then it returns only group.
+    ► if there exist more than one group - then it returns tuples of groups.
+
+# match() - this matches the text at the beginning of the string , if match found then returns the 
+    match otherwise NONE
+     ► only returns a single match
+
+# search() - this also returns only the first match in the entire string.
+
+♦ Flags : makes our life easier.
+# example: pattern = re.compile(r'start', re.IGNORECASE)
+
+• shorthand for the flags also exist : 
+pattern = re.compile(r'start', re.I)

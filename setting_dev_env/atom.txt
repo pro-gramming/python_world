@@ -1,0 +1,15 @@
+1. Syntax theme: Predawn , atom material, Jackhammer
+
+2. Autocomplete Python Package: jedi ( locally bases library) , kite (online bases)
+    For reference : https://atom.io/packages/autocomplete-python
+
+3. File Icon Package: https://atom.io/packages/atom-file-icons
+
+4. Linter-flake8 package : modular source code checker
+     https://atom.io/packages/linter-flake8
+
+5. Minimap package: https://atom.io/packages/minimap
+
+6. python-autopep 8 package :https://atom.io/packages/python-autopep8
+
+7. script package : https://atom.io/packages/script

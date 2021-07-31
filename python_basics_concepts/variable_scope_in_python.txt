@@ -1,0 +1,72 @@
+'''
+LEGB
+Local, Enclosing, Global, Built-in
+
+'''
+
+►ORDER is very crucial here.
+LEGB
+
+♦A simple code snippet:
+
+x= 'global x'
+
+def test():
+   global x	#reference the global variable, you can even use it to create it here explicitly
+   x= 'lcoal x'
+   print(x)
+
+test()
+print(x)
+
+►try not to use the global concept too much as it signifies that you are doing something
+ wrong and by the way local scoping is much more useful for different purposes as it 
+  creates the simplicity and clearity in using it.
+
+►the parameter passed to function are also declared to have local scope within that 
+   function.
+
+♦BUILT-IN SCOPE:
+
+►how to view that variables in our built-in scopes :
+
+#import builtins
+#print(dir(builtins))  -- dir - gets the list of attributes of the given object.
+
+►you can also override the builts in functions, by declaring the function in global 
+ scope (remember the Ordering we talked about)
+
+♦ENCLOSING SCOPE - has to do with nested functions.
+ a simple code snippet
+
+def outer():
+    x = 'outer x '
+    def inner():
+	x= 'inner x'
+	print(x)
+
+    inner(x)
+    print(x)
+
+outer()
+
+►how to explicitly change the enclosing scope variables using NONLOCAL X,
+
+def outer():
+    x = 'outer x '
+    def inner():
+	nonlocal x
+	x= 'inner x'
+	print(x)
+
+    inner(x)
+    print(x)
+
+outer()
+
+output:
+
+inner x
+inner x
+
+

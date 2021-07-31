@@ -1,0 +1,32 @@
+@property  #this decorator
+def email(self):
+	return '{}.{}@email.com'.format(self.first , self.last)
+
+#now you access this as :
+print(emp_1.email)
+
+►here you are accessing class method as attribute just by declaring the @property decorator.
+
+♦setter is used to set values in the specified way:
+for ex:
+
+@fullname.setter
+def fullname(self, name):
+	first, last = name.split(' ')
+	self.first  = first
+	self.last = last
+
+#now you can even pass the name of the emp as :
+emp_1.fullname = 'Dinesh Singh'
+
+♦deleters
+#this also starts with @<property name>.deleter just like setter
+#it does not require any arguments other than self.
+
+@fullname.deleter
+def fullname(self):
+	print('delete name!')
+	self.first = None
+	self.last = None
+
+del emp_1.fullname 

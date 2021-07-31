@@ -1,0 +1,38 @@
+# stands for javascript object notation
+
+# import json 	-> module in python
+#part of standard library
+
+# Converting json format to python format
+json_string = """ contains the json type syntax"""
+• this syntax is then converted to python automatically using json.loads(json_string) method
+► people_string = """ json format data """
+
+#creating object for python
+data = json.loads(people_string)
+► this method returns json object that python can understand
+
+# Converting object to json format again
+
+• let us assume we changed the json object as:
+
+for person in data['people']:
+	del perosn['phone']
+# now using the "dumps" method:
+
+new_string = json.dumps(data, indent=2)
+print(new_string)
+
+#Another useful option in dumps is the sort_keys = True, this sorts the keys alphabetically
+►new_string = json.dumps(data, indent=2, sort_keys=True)
+
+♦ dumps and loads works with the string whereas the dump and load work with file object.
+
+
+
+
+
+
+
+
+

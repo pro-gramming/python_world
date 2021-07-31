@@ -1,0 +1,78 @@
+♦Here you'll understand how to import modules that you created on your own.
+
+► if you create the python program or module in the same dir then you can directly
+import the modules into the other python file while working on it.
+
+#import the module at the top of the file.
+►if there is any print stat. in that it will also be printed when you run the file.
+
+►Now using the func in the module 
+moduleName.Func_name()
+
+►specifying the name so as to shorten the length of the module
+import my_module as mm
+
+►specifying to import func from the module dir
+from my_module import find_index
+	►now just use the name of func as it is
+	►only gives access to this specific func.
+
+from my_module import find_index , test # multiple func import
+
+♦try not to use the below syntax
+from my_module import *
+
+♦♦WHAT actually happens when you import the modules it checks certain specified
+      paths in the sys.path list
+
+►How to see the directories where the python looks for modules 
+
+import sys
+print(sys.path)
+
+►specifying the particular dir. for importing the module
+►note : below lines are placed before you import your module.
+import sys
+sys.path.append('/path/where/your/module/exist')
+
+♦HOW TO SET THE ENV VAR ON LINUX 
+►go into your bash_profile config file and append the following
+
+export PYTHONPATH="/path /of/your/module/"
+►now just restart the bash and you are good to go.
+
+♦HOW TO SET ENV VAR ON WINDOWS
+►go to my_computer settings and then to advanced system settings
+adn then click on env var.
+ now create the new env var.
+ Name : PYTHONPATH
+►now just the save and then you are good to go
+
+
+♦SOME COMMON STANDARD MODULES:
+
+import random
+student_names = []
+random_names = random.choice(student_names)
+print(randon_names)
+
+♦for basic mathematical operations
+import math
+
+♦for date and time lib
+♦different for cal lib
+
+import datetime
+import calendar
+
+♦OS modules
+
+import os
+►to check pwd
+print(os.getcwd())
+
+♦to know the location of the python module in the file dir
+► print(os.__file__)
+
+
+ 

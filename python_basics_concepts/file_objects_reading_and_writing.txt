@@ -1,0 +1,91 @@
+#FILE OBJECTS
+
+GOLDEN RULE: what is open should be closed
+
+►using built in open function.
+f = open('test.txt')
+
+♦Modes when opening a file.
+►Reading (default) 
+►Writing 
+►Appending
+► reading and writing
+
+f = open('test.txt', 'r')
+f = open('test.txt' , 'w')
+f = open('test.txt', 'a')
+f = open('test.txt', 'r+')	#for reading and writing
+
+#closing a file -  f.close()
+
+#BENEFIT OF USING A CONTEXT MANAGER:
+► It allows the advantage of automatically closing the files for us.
+►also closes the file if exceptions are confronted.
+#can be used as:-
+   with open ('test.txt', 'r') as f:
+	pass
+
+►how to read a small file
+   with open ('test.txt', 'r') as f:
+	f_contents = f.read()
+	print(f_contents)
+
+►f.readlines() = returns a list with \n characters.
+►f.readline() = read a single file and move the cursor to the next line so that if you call
+	this func again then next line would be extracted.
+
+NOTE: print statement ends with a new line escape char by default.
+
+►reading a whole file line by line: 
+    for line in f:
+	print(line, end='')
+#using this method faclitates us read a line at a time.
+
+♦Reading certain no. of characters of a file at a time.
+
+size_to_read = 10
+f_contents = f.read(size_to_read)
+while len(f_contents) > 0:
+	print(f_contents, end='*')
+	f_contents = f.read(size_to_read)
+
+►How to know the position of the cursor in a file
+print(f.tell())
+
+►Manipulating the position of the cursor
+f.seek(0)
+
+♦WRITING TO A FILE:
+f.write('test')
+
+►using seek method while writing to a file could get confusing most of the time.
+  so try to use it to a minimal. As it overwrites only specific parts for eg:
+
+f.write('test')
+f.seek(0)
+f.write('r')
+
+
+♦EXAMPLE OF READING AND WRITING TO A FILE:
+
+with open('test1.txt' , 'r') as rf:
+     with open('test1_copy.txt', 'w') as wf:
+	for line in rf:
+	    wf.write(line)
+
+
+♦ TEXT IO:
+# text io attributes : only few are specified , for more info go to the official documentation page.
+
+► encoding : for beginners , UTF-8 will work just fine
+► read(size=-1) : read the whole file or the size specified by the user and returns a single string.
+► readline(size = -1): read until the newline or EOF and return a single string.
+
+► seek(offset, whence=SEEK_SET) :
+# whence values: 0, 1, 2
+
+► tell() : return the current stream position as an opaque no.
+
+► write() : write the string s to the stream.
+
+

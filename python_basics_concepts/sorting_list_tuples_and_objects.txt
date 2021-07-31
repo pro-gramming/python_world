@@ -1,0 +1,48 @@
+♦We can almost sort on every datatypes 
+
+we can sort on list , tuples, dictionary and also based on some custom criteria.
+► function used for sorting:
+	►sorted(arguments passed here)
+►sorted method returns a new sorted list , used for storing the list somewhere like:
+s_list = sorted(li)
+
+►sort method just sort the list in place and return NONE: 
+ li.sort()
+##SPECIFIC TO LIST ONLY
+
+►Sorting in the reverse order:
+sorted(list , reverse=Ture)
+li.sort(reverse=True)
+
+♦SORTED FUNCTION CAN BE USED WITH TUPLES AND DICT
+►when using sorted with dictionary , it sorts the keys by default.
+
+
+♦SORTING VALUES ON SOME DIFFERENT CRITERIA
+for eg:- sorting on the basis of absolute value:
+s_li = sorted(li, key=abs)
+
+►you can even sort the class based on specific attributes:
+#note: here you have to make a custom fuction for this 
+
+"""
+def e_sort(emp):
+   return emp.age
+
+s_employees = sorted(employees, key = e_sort)
+
+print(s_employees)
+""'
+
+►if want to print the sorted value in reverse order
+
+s_employees = sorted(employees, key = e_sort , reverse= True)
+
+♦When working with class you can also use the standard lib. OPERATOR
+i.e. 	from operator import attrgetter
+
+s_employees = sorted(employees, key =attrgetter('age'))
+
+
+
+

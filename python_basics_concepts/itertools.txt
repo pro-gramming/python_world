@@ -1,0 +1,106 @@
+# itertools : collection of tools that allow us to deal with iterators fast and in m/m efficient way.
+
+import itertools
+
+♦COUNT: 
+
+counter = itertools.count()	or 	itertools.count(start=5, step=5)
+
+for num in counter:
+     print(num)	# this run an infinite loop
+
+print(next(counter))
+print(next(counter))
+print(next(counter))
+
+#the print(next(counter)) will extract only one value.
+
+# zip() = takes two iterables and combine thier value.
+
+# an iterator : it is an item with a state that remembers where it left off previously.
+
+♦ ZIP_LONGEST:
+
+# it works just like zip method , but ends only when the longest iterables is exhausted
+► daily_data = list(itertools.zip_longest( range(10), data)
+
+print(daily_data)
+
+♦ CYCLE: 
+
+# it takes iterables as an arguments and loop over its values again and again 
+
+counter = itertools.cycle([1 , 2 , 3])
+print(next(counter))
+
+
+♦ REPEAT : 
+
+# returns a constant value again and again :
+
+counter = itertool.repeat(2, times=3)  # returns 2 , three times then the StopIteration exception.
+
+♦ STARMAP
+
+squares = itertools.starmap(pow , [(0,2) , (1,2), (2,2)])
+
+♦ COMBINATIONS AND PERMUTATIONS:
+
+# this doesn't return the repeat values like : (0,0), ( 2,2) etc. hence we can use:
+
+► result = itertools.combinations_with_replacement(numbers ,4)
+
+► PRODUCT :
+
+result = itertools.product(numbers , repeat=4)
+for item in result: 
+    result(item)
+
+♦ CHAIN: 
+
+# it will loop over the set of lists , where first it traverse first list when it get exhausted it will go 
+    on the traverse to the 2nd list and so on .
+► combines = itertools.chain(list1 , list2 , list3)
+    
+    for item in combined:
+	print(item)
+
+# how to slice over certain iterables:
+
+♦ ISLICE:
+
+result = itertools.islice(range(10) , 1 ,5 ,2)
+for item in result: 
+     print(item)
+
+#another example : opening sample file and printing certain no. of lines:
+
+with open('test.log', 'r') as f :
+    header = itertolls.islice(f, 3)
+
+    for line in header: 
+          print(line, end=' ')
+
+
+♦ COMPRESS : 
+# returns element of iterables where the corresponding elements are TRUE:
+
+letters = [ 'a', 'b' , 'c', 'd' ]
+selectors = [ True , True , False , True]
+
+results = itertools.compress(letters , selectors)
+
+for item in result: 
+    print(item)
+
+♦ filterfalse
+♦ dropwhile
+♦ takewhile
+
+
+# how to keep the running total of the list : 
+♦ accumulate(numbers)
+
+
+
+

@@ -1,0 +1,31 @@
+def hello_func():
+      print('hello function')
+
+#if we don't return anything, it returns NONE.
+
+def hello_func(greeting , name='you'):
+     return ' {}, {}'.format(greeting, name)
+
+#print(hello_func('hi', name ='dinesh'))
+
+
+♦ CONCEPT OF *args and **kwargs
+
+def student_info(*args, **kwargs):
+   print(args)
+   print(kwargs)
+
+# use the above method when you don't know the exact no. of arguments.
+*args returns TUPLES
+**kwargs returns DICTIONARY
+
+►NOTE: these are also used to unpack the values passed to the arguments
+
+courses = ['math', 'art']
+info = {'name': 'john', 'age': 22}
+
+student_info(*courses, **info)
+#here * before the courses will unpack the elements in the list and helps to 
+   unravel the o/p as achieved in the previous case. whereas
+   ** before info helps to unpack the dictionary.
+

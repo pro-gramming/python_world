@@ -1,0 +1,55 @@
+♦ How to create the class method:
+
+#using the class decorator:
+@classmethod
+def set_raise_amt(cls, amoutn):
+    cls.raise_amt = amount
+
+►it's just a method like any other method, only thing thats different about this is the 
+   scope of it. It also takes the class instace automatically.
+
+♦What do you mean when you say you are using class methods as an alternative to 
+   constructors:
+►they usually mean that they can provide various ways to initialize variables.
+
+For example:
+#lets suppose we are getting a string concatenated by hypens and we wanna create 
+  our employee from that :
+
+►defining our class:
+    @classmethod
+    def from_string(cls, emp_str):
+	first, last , pay = emp_str.split('-'):
+	return cls(first, last, pay)
+
+     emp_str_1 = 'Dinesh-singh-100000'
+
+     new_emp_1 = Employee.from_string(emp_str_1)
+
+♦INSTANCE METHOD:
+	Passes instance of the class automatically like self.
+♦CLASSMETHODS:
+	Passes class to the methods automatically like cls.
+♦STATIC METHODS:
+	They don't pass anything automatically, we only include them in our class
+	as they have some logical connection with our class.
+
+NOTE: In python the days in week is associated with No's as Monday = 0 and 
+	Sunday = 6
+
+♦ A simple way to know if you should make the method a static method:
+	It is when you don't access the class or an instance from the method.
+
+For eg:
+
+@staticmethod
+def is_workday(day):
+     if day.weekday() == 5 or day.weekday() == 6:
+	return False
+    return Ture
+
+import datetime
+my_date = datetime.date(2016, 7 , 11)
+
+print(Employee.is_workday(my_date))
+

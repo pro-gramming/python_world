@@ -1,0 +1,49 @@
+♦How to inherit the parent class to the subclass:
+
+class ParentClass:
+    pass
+
+class ChildClass(ParentClass):
+    pass
+
+♦How to viusalize the method resolution order(places where python searches for 
+	attributes and methods):
+     print(help(class))
+
+♦Go through the below code thorogly:
+    class Developer(Employee):
+	raise_amt = 1.10
+	
+	def __init__(self, first, last, pay , prog_lang):
+	    super().__init__(first, last, pay)
+	    self.pro_lang = prog_lang
+
+♦NOTE: Try not to pass mutuable objects to arguments:
+
+  class Manager(Employee):
+	
+	def __init__(self, first, last, pay , employees=None):
+	    super().__init__(first, last, pay)
+	    if employee is None:
+	  	self.employess = []
+	    else:
+		self.employees = employees
+
+	def add_emp(self, emp):
+	   if emp not in self.employees:
+		self.employees.append(emp)
+
+	def remove_emp(self, emp):
+	   if emp in self.employees:
+		self.employees.remove(emp)
+
+	def print_emps(self):
+	   for emp in self.employees:
+		print('-->', emp.fullname())
+
+♠PYTHON HAS TWO METHODS CALLED:
+	► isinstance(instance, class) - returns the if instance is of the class
+	► issubclass(subclass, parentclass) - returns if the subclass inherits the parentclass
+
+
+

@@ -1,0 +1,49 @@
+they allow use us to group data and functions.
+
+►how to create class:-
+
+►empty class:
+  class Employee:
+	pass
+
+♦INSTANCE VARIABLE: these contains data that are unique to the particular 
+	instances.
+
+► we can seperately create instance variables for our unique instance.
+
+♠How to setup the variables automatically when we create intance is to define a _init_
+method.(constructor)
+
+class Employee:
+    def __init__(self, first, last , pay):
+	self.first = first
+	self.last = last
+	self.pay = pay
+	self.pay = pay
+
+# here the word 'self' is not a keyword. You can use any word here, but it's better to 
+  stick to the convention.
+# In place of 'self.first' you can use your own variable like self.pehla = first
+
+def __init__(self, first, last , pay) :: here the self represent the instance and is passed
+	automatically.
+
+♦NOTE: Every method in a class takes the first argument as the instance of the class.
+	And so we usually write it as 'self'
+
+♦If you forget to pass the self argument when defining a method in class. Below error
+   will be shown.
+
+TYPE ERROR:- func() takes 0 positional argument but 1 was given.
+
+♠TWO WAYS TO CALL A FUNCTION IN A CLASS:
+
+1. Through class itself:
+   Employee.func(class_instance)
+
+#in the above case you need to provide the instace of the class explicitly.
+
+2. Through instance:
+   emp_1.func()
+
+#here the instance is passed automatically 

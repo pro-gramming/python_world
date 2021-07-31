@@ -1,0 +1,12 @@
+slicing - method to extract certain elements from the list or string.
+
+►for this task there are two types of indexes
+    ►positive index
+    ►negative index (start from -1 and from back)
+
+♦Another syntax: 
+   list[start:end:step]
+
+►printing entire list in reverse:
+ list[::-1]
+

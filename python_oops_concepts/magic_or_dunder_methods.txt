@@ -1,0 +1,41 @@
+It allows us to emulate the built-in behaviour using python and it also allow us to 
+use function overriding.
+
+Most commonly used function:
+__repr__ , __str__ , __init__:
+
+__repr__  : used to denote the unambiguous represents of the object, and should be used for debugging
+	logging and so on... , hence it meant to be seen by other developers.
+
+Ex:-
+
+def __repr__(self):
+	return "Employee( '{}' , '{}'., '{})".format(self.first, self.last , self.pay)
+
+#if str method is not created this one will be called by default.
+
+__str__: meant to be readable form of the object and is meant to be displayed to the in-user.
+
+def __str__(self):
+	return '{} - {}'.format(self.fullname(), self.fullname , self.email)
+
+#Calling the functions directly by there names:
+print(repr(emp_1))
+print(str(emp_1))
+
+
+♦There are also special methods for arithmetic operations:
+for ex:- int and str have their add methods in which int add the two No. and str concatenate the two chars
+
+♦len() is also a special method:
+   def __len__():
+	return len(self.fullname())
+   print(len(emp_1))
+
+#now this will return the characters in your full name 
+
+NOTE: important keyword: "NotImplemented "- if the current object doesn't know how to handle the 
+	operation , it falls back without returning any error to know if the other object knows how to
+	handle the operation.
+
+

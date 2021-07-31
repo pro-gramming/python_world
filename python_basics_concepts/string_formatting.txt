@@ -1,0 +1,53 @@
+♦String formatting and string cotcatenation are not the same thing:
+
+♦String Cotcatnation-
+►you have to convert int into str and 
+►you need to keep the track of all the spaces for better reading.
+
+♦String Formatting:-
+
+person = {'name': 'jenn', 'age': 23}
+sentence = 'My name is {} and I a {} years old.'.format(person['name'], person['age'])
+
+►explicitly signifying placeholders-
+sentence = 'My name is {0} and I am {1} years old.'.format(person['name'], person['age'])
+
+►Another use:-
+tag = 'h1'
+text = 'This is a headline'
+
+sentence = '<{0}>{1}</o}'.format(tag, text)
+
+►sentece = 'My name is {0[name]} and I am {1[age]} years old.'format(person)
+
+♦Accessing attributes from a class:-
+ class Person():
+    def __init__(self, name, age):
+	self.name = name
+	self.age = age
+
+p1 = Person('Jack', '33')
+
+sentence = 'My name is {0.name} and I am {0.age} years old.'.format(p1)
+print(sentence)
+
+♦Assigning our own names to the placeholders:
+sentence = 'My name is {name} and I am {age} years old.'.format(name='jenn', age='30')
+
+♦Extracting the dict using KWARGS method and using the keys in place of placeholders:-
+sentence =  'My name is {name} and I am {age} years old.'.format(**person)
+
+►Adding FORMATTING  to our placeholders:-
+
+for i in range(1,11):
+    sentence = 'The value is {:02}'.format(i)  #meaning zero padding upto two digits
+    print(sentence)
+
+►printing upto two decimal places using placeholder formatting:-
+ pi = 3.14159265
+ sentence = 'Pi is equal to {:.2f}'.format(pi)
+
+►how to have comma seperators on large values:-
+sentence = ' 1 MB is equal to {:,} bytes'.format(1000*2)
+
+

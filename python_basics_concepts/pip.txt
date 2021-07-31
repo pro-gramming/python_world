@@ -1,0 +1,29 @@
+♦Python package manager - PIP
+
+# pip help => most helpful command
+#pip help <specific_command> 
+
+►searching the package
+#pip search Pympler
+ 
+►installing the package
+#pip install Pylmpler
+
+►to get list of installed package
+#pip list
+
+►removing the package
+#pip uninstall Pympler
+
+►knowing the if the installed package is the latest one or not
+#pip list --outdated or -o
+
+►Upgrading the package 
+#pip install -U <package_name>
+
+► listing the packages and the version No. in requirements format:
+# pip freeze
+
+►installing the packages with certain version No. from the requiements file :
+#pip install -r r_test.txt   #r - denotes that we are specifying the requirements file
+

@@ -1,0 +1,78 @@
+The os module allow us to interact with the underlying os system.
+For eg:-
+1. navigate the file system.
+2.get file info
+3. lookup and change the env variables
+4.move around the files etc etc ...
+
+# OS MODULE IS BUILT-IN MODULE INSTALLED BY DEFAULT:-
+import os
+
+►how to see the attributes within the module:-
+print(dir(os))
+
+#get curret working dirctory
+os.getcwd()
+
+#changing the directory
+os.chdir('path')
+
+#listing the directory
+os.listdir()
+
+#creating a dir
+os.mkdir('path')
+
+#creating dir few levels deep
+os.makedirs()
+
+#removing dir or directories(plural)
+os.rmdir()
+os.removedirs()
+
+#changing a file name:
+os.rename('oldName.txt' , 'newName.txt')
+
+#getting the stats of the file:
+os.stat('demo.txt')
+
+#changing the timestamp into human readable format:
+from datetime import datetime
+
+mod_time = os.stat('demo.txt').st_mtime
+print(datetime.fromtimestamp(mod_time))
+
+♦OS.WALK() METHOD :
+► walk() method is the genetor that returns the three values in form of tuples .i.e.:
+1.directory path
+2.directory names
+3. filenames
+
+Example:- code snippet:
+
+for dirpath, dirnames , filenames in os.walk(os.getcwd()):
+     print('Current Path:', dirpath)
+     print('Directories:', dirnames)
+     print('Files:', filenames)
+     print()
+
+# Printing the environments variables:
+print(os.environ)
+
+► retrieving a specific environment variable:
+print(os.environ.get('HOME'))
+
+#Adding two paths
+file_path = os.path.join(os.environ.get('HOME', 'test.txt')
+print(file_path)
+
+►Few other methods that we can use with os.path()
+os.path.basename()
+os.path.dirname()
+os.path.split()  - returns tuple 
+os.path.exists()   - True or False
+os.path.isdir()
+os.path.isfile()
+os.path.splitext()   - split the filename and the extension and returns the tuple
+
+

@@ -1,0 +1,12 @@
+►when using the class variables you either use it though class itself or you use it with 
+   the instance of class, otherwise it'll return error.
+
+►Thing that happen when we call the class variable through instance:
+  1. it checks if the instance consist of that attribute and then
+  2. it checks if that attribute resides in anyone of the classes it inherits from.
+
+♦Printing the namespaces of the variables:
+  print(Employee.__dict__)
+  print(emp_1.__dict__)
+
+

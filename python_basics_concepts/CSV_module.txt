@@ -1,0 +1,46 @@
+CSV - Comma Separated Values
+
+CSV files are the ones that contains data in which fields are serparated with comma(generally).
+#it is not necessary that data is separated only through comma. tabs or "-" separated file is also 
+   known as CSV file.
+
+♦reading a CSV file:
+
+import csv
+
+with open('name.csv', 'r') as csv_file:	#using context manager
+	csv_reader = csv.reader(csv_file)
+
+	for line in csv_reader:
+	     print(line)
+
+♦writing to new file but with '-':
+
+import csv
+
+with open('name.csv', 'r') as csv_file:	#using context manager
+	csv_reader = csv.reader(csv_file)
+
+	with open('new_csv.csv' , 'w') as new_file:
+		csv_writer = csv.writer(new_file , delimeter= '-')
+
+		for line in csv_reader:
+	     		csv_writer.writerow(line)
+
+
+♦More efficient and real world way of handling csv files: (using DictReader() and DictWriter() method)
+
+import csv
+
+with open('name.csv', 'r') as csv_file:	#using context manager
+	csv_reader = csv.DictReader(csv_file)
+
+	with open('new_csv.csv' , 'w') as new_file:
+		fieldnames = ['first_name', 'last_name', 'email']
+
+		csv_writer = csv.writer(new_file , fieldnames=fieldnames , delimeter= '-')
+
+		for line in csv_reader:
+	     		csv_writer.writerow(line)
+
+

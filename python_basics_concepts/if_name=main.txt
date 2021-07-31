@@ -1,0 +1,12 @@
+Before running any files, python sets the value of few variables and the name is one of
+them.
+►When python runs python file directly if sets __name__=__main__
+
+►When we import the python file then this __name__ equals the name of the file 
+ itself.
+
+Hence, 
+if __name__='__main__' :
+	main()
+# it checks whether the file is imported or being run directly by python.
+

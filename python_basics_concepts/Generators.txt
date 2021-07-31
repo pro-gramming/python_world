@@ -1,0 +1,29 @@
+♦Generators don't hold value in the memory hence it is better to use for increased performance.
+►Keyword used in generators :- yield
+
+Example:-
+
+def square_numbers(nums):
+	for i in nums:
+	        yield (i*i)
+
+my_nums = square_numbers([1,2,3,4,5])
+
+for num in my_num:
+	print num
+
+♦using list comprehension to do the same
+
+my _nums = [x*x for x in [1,2,3,4,5]]	#produces a list
+my _nums = (x*x for x in [1,2,3,4,5])	#produces a generator object
+
+►Converting a generator to a list :
+print list(my_nums)
+#don't use this as this destroys the whole concept of using yield to inc performance.
+
+♦As we use the generator function, when the first yield command comes it stops , it does nothing
+   it wait for us to use next() method to get to the next value in sequence or we can use for loop as 
+   used above.
+
+
+

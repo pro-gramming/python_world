@@ -1,0 +1,44 @@
+♦Working with the key value pairs:-
+
+keys - can be anything that is immutable datatype
+values - can be anything
+
+►accessing the values using the name of the key itself
+
+student = {'name': 'John' , 'age': 25, 'courses': ['math','compSci']}
+print(student['name'])	#returns keyerror when the key doesn't exist
+
+►using the get method ---- when the key doesn't exist it returns None
+►setting default value for keys that not found :
+print(student['name'] , 'Not_Found')
+
+►adding a key value pair in the dictionary:
+
+student['phone'] = '5555-5555-5555'
+#if the key already exists it will update the value of that key or we can use update() method
+
+►update() method - it takes dictionary as an argument
+#it can used to update more than one value at once in a dict
+
+►deleting a particular key using del keyword
+del student['age']
+
+►deleting key using pop() method  - returns the value while deleting it
+age = student.pop('age')
+print(age)
+
+►use len to see total no. of keys
+
+print(student.keys())		#returns only the keys
+print(student.values())	#returns only the values
+print(student.items())	#returns pair of the key and values
+    
+
+
+dineshneeraj02@gmail.com
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+list comprehension = it is the more easier and readable way to create a list.
+
+►LAMBDA is a anonymous function: used to provide a single line definition.
+syntax: (lambda argument: expression/definition, iterable/sequence)
+
+►map function - runs everything in a list through a certain function.
+ex - my_list = map(lambda n: n*n, nums)
+
+►filter function - filters the arguments given to it using lambda or other functions
+ex -  my_list = filter(lambda n: n%2 == 0, nums)
+
+► zip functions - matches the elements by index wise that returns the tuple.
+
+♦Code generators - similar to list comprehensions in syntax but entirely different
+   conceptwise

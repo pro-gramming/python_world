@@ -1,0 +1,30 @@
+♦What to use double quotes or single quotes:
+ 	► it depends on what kind of text are you working on.
+$ message = "bobby's world"
+$print(message)
+
+►creating multiple line string:
+message = """this is a string that can extend to
+	multiple line untill it is ended like this"""
+
+len(arguments)
+message.upper()
+message.lower()
+message.count('hello')
+message.find('world')    #returns the index where the word starts and -1 for not found
+
+message.replace('world' , 'universe')    #it returns the new string with new word in place
+new_message =  message.replace('world' , 'universe')
+print(message)
+
+♦contatenating the string using +
+
+♦f strings: (recently released)
+to create the f string just start the string with the f.
+
+message = f'{greeting}, {name.upper()}. Welcome!'
+
+♦print(dir(name))
+#this will show the attr and methods associated with it.
+►to know how these works
+help(str)
